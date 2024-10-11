@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="purchase_order_view_inherit_infomedia" model="ir.ui.view">
+            <field name="name">purchase_order.view.tree.inherit.infomedia</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_approve']" position="before">
+                    <field name="budget_status" widget="badge" 
+                       decoration-success="budget_status == 'lolos'"
+                       decoration-danger="budget_status == 'tlolos'"/>
+                </xpath>
+            </field>
+        </record>
+
+        
+
+    
+        <record id="budget_menu_action" model="ir.actions.act_window">
+            <field name="name">Budget Management</field>
+            <field name="res_model">purchase.order</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                
+            </field> -->
+        </record>
+    
+    </data>
+    
+
+</odoo>

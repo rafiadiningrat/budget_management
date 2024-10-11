@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <menuitem
+            id="infomedia_menu"
+            name="Infomedia"
+            sequence="10"/>
+        <menuitem
+            id="booking_menu"
+            name="Budget Management"
+            action="budget_menu_action"
+            groups=""
+            parent="infomedia_menu"
+            sequence="10"/>
+            <!-- <menuitem
+                id="booking_order_menu"
+                name="Booking Order"
+                action="booking_menu_action"
+                groups=""
+                parent="booking_menu"
+                sequence="10"/>
+            <menuitem
+                id="work_order_menu"
+                name="Work Order"
+                action="work_order_action"
+                groups=""
+                parent="booking_menu"
+                sequence="20"/>
+            <menuitem
+                id="service_team_menu"
+                name="Service Team"
+                action="service_team_action"
+                groups=""
+                parent="booking_menu"
+                sequence="30"/>     -->
+    </data>
+
+</odoo>
