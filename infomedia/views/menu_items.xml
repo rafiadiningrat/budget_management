@@ -3,6 +3,7 @@
 
     <data>
 
+        
         <menuitem
             id="infomedia_menu"
             name="Infomedia"
@@ -14,6 +15,23 @@
             groups=""
             parent="infomedia_menu"
             sequence="10"/>
+            <!-- <menuitem
+            id="dashboard_menu"
+            name="Dashboard"
+            action="dashboard_menu_action"
+            groups=""
+            parent="infomedia_menu"
+            sequence="20"/> -->
+            <menuitem 
+            id="menu_sales_dashboard"
+            name="Sales Dashboard"
+            parent="infomedia_menu"
+            action="action_open_sales_dashboard"/>
+            <!-- <act_window id="action_open_sales_dashboard"
+            name="Sales Dashboard"
+            res_model="sale.order"
+            view_mode="kanban,form"
+            target="new"/> -->
             <!-- <menuitem
                 id="booking_order_menu"
                 name="Booking Order"

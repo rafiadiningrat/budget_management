@@ -18,13 +18,14 @@ Long description of module's purpose
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','om_account_accountant','purchase'],
+    'depends': ['base','om_account_accountant','purchase', 'sale_management', 'web'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         # 'data/sequence.xml',
         'views/purchase_order_views.xml',
+        'views/sales_dashboard_templates.xml',
         # 'views/service_team_views.xml',
         # 'views/work_order_views.xml',
         # 'views/views.xml',
@@ -34,6 +35,19 @@ Long description of module's purpose
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
+    ],
+    'assets': {
+        'web.assets_backend': [
+            'infomedia/static/src/js/sales_dashboard.js',
+            'infomedia/static/src/xml/sales_dashboard.xml',
+            'infomedia/static/src/js/sale_order_kanban.js',
+            # 'infomedia/static/src/components/order_card/order_card.js',
+            # 'infomedia/static/src/components/order_card/order_card.xml',
+            # 'infomedia/static/src/components/*/.scss',
+        ],
+    },
+    'qweb': [
+        'infomedia/static/src/xml/sales_dashboard.xml',
     ],
 }
 

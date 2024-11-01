@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+<t name="Dashboard Main">
+    <div class="o_sales_dashboard">
+        <h2>Sales Dashboard</h2>
+        <div>Total Sales: <t t-esc="state.totalSales"/></div>
+        <h3>Top 5 Products</h3>
+        <ul>
+            <t t-foreach="state.topProducts" t-as="product">
+                <li><t t-esc="product.name"/> - Sales: <t t-esc="product.sales_count"/></li>
+            </t>
+        </ul>
+    </div>
+</t>
+
+</odoo>
+
+

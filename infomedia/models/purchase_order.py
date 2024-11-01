@@ -41,7 +41,6 @@ class PurchaseOrder(models.Model):
 
             if not budget_posts:
                 _logger.warning("No budget defined for category %s", line.product_id.categ_id.name)
-                self.budget_status = 'waiting'
                 if raise_exception:
                     raise UserError(_('No budget defined for category %s. Please set a budget to proceed.') % line.product_id.categ_id.name)
                 return False
